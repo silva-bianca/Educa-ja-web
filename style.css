@@ -1,0 +1,178 @@
+/* ===== base simples ===== */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #131312;         /* cinza bem escuro */
+  background: #f7f7f7;   /* cinza claro */
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: #1d4ed8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+
+/* ===== layout ===== */
+header, main, footer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+header { padding: 24px 16px 12px; }
+main { padding: 16px 16px 32px; }
+footer {
+  padding: 24px 16px;
+  border-top: 1px solid #e5e7eb;
+  color: #475569;
+}
+
+/* ===== títulos ===== */
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  color: #1f2937; /* cinza escuro */
+}
+
+main h2 {
+  margin: 24px 0 8px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #111827;
+}
+main h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin-top: 6px;
+  background: #2563eb; /* azul */
+  border-radius: 3px;
+}
+main h3 {
+  margin: 16px 0 6px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+p { margin: 0 0 12px; color: #475569; }
+.help { color: #64748b; font-size: 14px; }
+
+/* ===== hero ===== */
+.hero {
+  margin-top: 12px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 8px;
+}
+.hero img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* ===== formulário ===== */
+form {
+  margin-top: 12px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+fieldset {
+  margin: 0 0 16px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f9fafb;
+}
+
+legend {
+  padding: 0 6px;
+  font-weight: 700;
+  color: #374151;
+}
+
+label {
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: 600;
+  color: #374151;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111827;
+  transition: border-color .15s ease;
+}
+
+input::placeholder, textarea::placeholder { color: #94a3b8; }
+
+input:hover, select:hover, textarea:hover {
+  border-color: #94a3b8;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #2563eb;
+  outline: 2px solid #2563eb;   /* foco simples e visível */
+  outline-offset: 2px;
+}
+
+/* erros/sucessos básicos (nativo do browser ajuda também) */
+input:required:invalid, select:required:invalid {
+  border-color: #dc2626;
+}
+input:valid {
+  border-color: #16a34a;
+}
+
+/* ===== botão ===== */
+button[type="submit"] {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 12px 18px;
+  font-weight: 700;
+  border: 0;
+  border-radius: 10px;
+  color: #ffffff;
+  background: #2563eb;
+  cursor: pointer;
+}
+button[type="submit"]:hover { background: #1d4ed8; }
+button[type="submit"]:active { background: #1e40af; }
+button[type="submit"]:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* ===== listas ===== */
+ul { margin: 0 0 16px 1.1em; padding: 0; }
+ul li { margin: 4px 0; }
+
+/* ===== rodapé ===== */
+footer p { margin: 0 0 6px; font-weight: 700; color: #111827; }
+footer address { font-style: normal; }
+footer a { color: #1d4ed8; }
+
+/* ===== responsivo simples ===== */
+@media (min-width: 768px) {
+  /* se quiser, dá pra colocar 2 colunas nos campos — ainda simples */
+  /* descomente se precisar
+  fieldset {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px 16px;
+    align-items: center;
+  }
+  fieldset > label { margin: 0; }
+  */
+}
